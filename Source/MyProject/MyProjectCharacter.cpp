@@ -57,6 +57,7 @@ void AMyProjectCharacter::BeginPlay()
 	}
 
 	// Make sure camera won't respond to collision with the player character
+	GetCapsuleComponent()->SetCollisionResponseToChannel(ECollisionChannel::ECC_Camera, ECollisionResponse::ECR_Ignore);
 	GetMesh()->SetCollisionResponseToChannel(ECollisionChannel::ECC_Camera, ECollisionResponse::ECR_Ignore);
 }
 
